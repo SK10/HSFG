@@ -65,8 +65,14 @@ namespace HSFG
                     }
                     else
                     {
-                        Console.WriteLine("# CSGO Installation folder was not found");
-                        exitApp();
+                        Console.WriteLine(Environment.NewLine + "# CSGO Installation folder was not found");
+                        Console.WriteLine("# You need to enter CSGO installation folder path manually");
+                        Console.WriteLine("# Opening a youtube tutorial on how to get CSGO folder path");
+                        System.Threading.Thread.Sleep(3000);
+                        System.Diagnostics.Process.Start("https://www.youtube-nocookie.com/embed/iYdKWi17ZBk");
+                        Console.Write("# Enter CSGO path: ");
+                        csgoFolder = Console.ReadLine() + @"\csgo\";
+                        Console.WriteLine("# CSGO installation folder is: " + csgoFolder);
                     }
                 }
             }
